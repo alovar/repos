@@ -16,7 +16,7 @@ fi
 
 HASH=`echo $COMMIT | awk '{ print $2}'`
 
-helper "can't pull from repo" git pull HEAD
+helper "can't pull from repo" git pull https://github.com/alovar/repos.git
 
 COMMIT=$(helper "can't call 'git log' on repo" git log -n1)
 if [ $? != 0 ]
